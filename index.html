@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Network biology overview</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Network biology overview">
+  <meta name="author" content="Keith Hughitt">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Network biology overview</h1>
+    <h2></h2>
+    <p>Keith Hughitt<br/></p>
+  </hgroup>
+    <a href="https://github.com/khughitt/slidify-network-biology/zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="segue dark" id="slide-1" style="background:;">
+  <article data-timings="">
+    <!-- Custom Styles -->
+
+<style type='text/css'>
+    slides > slide {
+        height: 800px;
+        margin-top: -400px;
+    }
+    img {
+        max-height: 560px;
+        max-width: 964px;
+    }
+    slide a {border-bottom: none;}
+    .references li { font-size: 18px; }
+</style>
+
+<!-- Custom JavaScript -->
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+
+<script type='text/javascript'>
+$(function() {
+    $("p:has(img)").addClass('centered');
+});
+</script>
+
+<!-- Slides start here -->
+
+<h2>Overview</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>TODO</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Types of networks</li>
+<li>Data used</li>
+<li>Approaches (PGM, Bayesian nets, correlation, etc.)</li>
+<li>Research questions that networks can be used to address</li>
+<li>Network concepts (more from Kwame in a couple weeks...)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The Big Picture</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Why networks?</h3>
+
+<ul>
+<li>For most of the history of biology, a reductionist approach has been used to
+understand different parts of an ecosystem, an organism, a cell, etc.</li>
+<li>This has gotten us pretty far, but you can only understand so much by looking
+at things piecemeal...</li>
+<li>It is only by looking at how all of the parts work together (as a &quot;system&quot;)
+that we can truly understand how something works.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>An analogy</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><span class='caption'>source: <a href="http://onlyhdwallpapers.com/wallpaper/cars_golf_volkswagen_parts_desktop_1440x900_hd-wallpaper-44957.jpg">http://onlyhdwallpapers.com/wallpaper/cars_golf_volkswagen_parts_desktop_1440x900_hd-wallpaper-44957.jpg</a></span>
+<img src="assets/img/cars_golf_volkswagen_parts_desktop_1440x900_hd-wallpaper-44957.jpg" alt="car parts"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Types of Biological Networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Cell signalling</li>
+<li>Metabolic interactions</li>
+<li>Protein-protein interaction</li>
+<li>Co-expression</li>
+<li>Transcription-factor binding</li>
+<li>Protein-phosphorylation</li>
+<li>Genetic interaction</li>
+<li>Gene regulatory</li>
+</ol>
+
+<p><strong>Basic goal</strong>: understand cellular phenomena at a systems scale.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Types of data used to construct biological networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Flow cytometry</li>
+<li>Expression data (Microarray, RNA-Seq)</li>
+<li>TF binding (ChIP-chip, ChIP-Seq, etc)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Transcription-factor binding networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Chromatin immunoprecipitation (ChIP)
+
+<ul>
+<li>Provides information on <em>in vivo</em> protein-DNA binding 
+associations.</li>
+<li>Antibodies targeting specific proteins are used to pull-down proteins in
+a sample and then associated DNA fragments measured.</li>
+<li>E.g. ChIP-chip and ChIP-Seq</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>References</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Peter J. Park,   (2009) Chip–Seq: Advantages And Challenges of A Maturing Technology.  <em>Nature Reviews Genetics</em>  <strong>10</strong>  669-680  <a href="http://dx.doi.org/10.1038/nrg2641">10.1038/nrg2641</a></li>
+<li>X. Zhu, M. Gerstein, M. Snyder,   (2007) Getting Connected: Analysis And Principles of Biological Networks.  <em>Genes &amp; Development</em>  <strong>21</strong>  1010-1024  <a href="http://dx.doi.org/10.1101/gad.1528707">10.1101/gad.1528707</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='TODO'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The Big Picture'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='An analogy'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Types of Biological Networks'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Types of data used to construct biological networks'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Transcription-factor binding networks'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='References'>
+         8
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
