@@ -54,7 +54,7 @@ $(function() {
 
 ---
 
-## An analogy
+## The problem...
 
 ![car parts](assets/img/cars_golf_volkswagen_parts_desktop_1440x900_hd-wallpaper-44957.jpg)
 <div style='float: right; width: 38%; font-size: 12px;'>source: http://onlyhdwallpapers.com/wallpaper/cars_golf_volkswagen_parts_desktop_1440x900_hd-wallpaper-44957.jpg</div>
@@ -207,6 +207,7 @@ Yeast Membrane Proteins Interaction Network (Babu lab)
 
 Another view of the human metabolome...
 
+![human metabolome](assets/img/pathway-1b.png)
 <div style='float: right; width: 38%; font-size: 12px;'>source: http://nuit-blanche.blogspot.com/2011/11/instances-of-null-spaces-can.html</div>
 
 ---
