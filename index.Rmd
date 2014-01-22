@@ -39,16 +39,6 @@ $(function() {
 
 ---
 
-## TODO
-
-1. Types of networks
-2. Data used
-3. Approaches (PGM, Bayesian nets, correlation, etc.)
-4. Research questions that networks can be used to address
-5. Network concepts (more from Kwame in a couple weeks...)
-
----
-
 ## The Big Picture
 
 ### Why networks?
@@ -68,6 +58,10 @@ $(function() {
 
 ![car parts](assets/img/cars_golf_volkswagen_parts_desktop_1440x900_hd-wallpaper-44957.jpg)
 <div style='float: right; width: 38%; font-size: 12px;'>source: http://onlyhdwallpapers.com/wallpaper/cars_golf_volkswagen_parts_desktop_1440x900_hd-wallpaper-44957.jpg</div>
+
+---.segue .dark
+
+## Types of Biological Networks
 
 ---
 
@@ -90,6 +84,7 @@ $(function() {
 2. Expression (Microarray, RNA-Seq)
 3. TF binding (ChIP-chip, ChIP-Seq, etc)
 4. Protein interaction (Y2H, TAP-MS)
+5. Metabolite concentrations (NMR, LC/MS, etc)
 
 ---
 
@@ -97,9 +92,10 @@ $(function() {
 
 ### Overview
 
+- Directed.
 - TF binding data provides information of gene <span class='red'>regulatory 
   relationships.</span>
-- Which proteins regulate which genes?
+- Which genes (transcription factors) regulate which other genes?
 
 ### Chromatin immunoprecipitation (ChIP)
 
@@ -196,6 +192,27 @@ Yeast Membrane Proteins Interaction Network (Babu lab)
 - Nodes: metabolites
 - Edges: biochemical reactions
 
+---
+
+## Metabolic Networks
+
+### KEGG
+
+![KEGG](assets/img/kegg.gif)
+<div style='float: right; width: 38%; font-size: 12px;'>source: http://www.cs.cmu.edu/~blmt/Seminar/SeminarMaterials/IntroMolBasDisease.html</div>
+
+---
+
+## Metabolic Networks
+
+Another view of the human metabolome...
+
+<div style='float: right; width: 38%; font-size: 12px;'>source: http://nuit-blanche.blogspot.com/2011/11/instances-of-null-spaces-can.html</div>
+
+---
+
+## Metabolic Networks
+
 ### Flux balance analysis (FBA)
 
 - *In silico* approach commonly used for metabolic network reconstruction.
@@ -207,6 +224,44 @@ Yeast Membrane Proteins Interaction Network (Babu lab)
 - Has been used successfully to make some predictions about affects of changes
   on a metabolic network.
 
+---
+
+## Co-expression Networks
+
+@TODO
+
+---.segue .dark
+
+## Network construction
+
+---
+
+## Approaches used to construct biologial networks
+
+@TODO
+
+---.segue .dark
+
+## Biological network analysis
+
+---
+
+## So, I built a network... now what?
+
+It's usually not enough to just build a network and print a pretty picture --
+or at least, it shouldn't be enough -- instead a useful network should provide
+some information about the system being investigated which is not immediately
+available by looking at its componenet in isolation.
+
+Depending on the type of network being investigated, different approaches may
+be adopted:
+
+- Module detection
+- Annotation (e.g. <span class='blue'>"guilt by association"</span>)
+- Impact of disease, etc. to underlying biochemical functioning
+- Targeted drug development
+- Comparative network analysis
+- Network integration
 
 ---
 
