@@ -59,6 +59,8 @@ $(function() {
   at things piecemeal...
 - It is only by looking at how all of the parts work together (as a "system")
   that we can truly understand how something works.
+- Once the quality of networks are sufficient, they can also be used to make
+  predictions.
 
 ---
 
@@ -127,6 +129,9 @@ $(function() {
 
 <!--<iframe width="640" height="480" src="//www.youtube.com/embed/Ms_ehUVvKKk"
 frameborder="0" allowfullscreen></iframe>-->
+Interleukin-1 binding to its receptor on a cell surface, created from
+structural data (Youtube).
+
 [![Protein interaction animation](http://img.youtube.com/vi/Ms_ehUVvKKk/0.jpg)](
     http://www.youtube.com/watch?v=Ms_ehUVvKKk)
 
@@ -141,15 +146,19 @@ frameborder="0" allowfullscreen></iframe>-->
 - This includes:
   - Protein complexes
   - Transiently interacting proteins
+- Undirected
 - The complete set of protein interactions in a cell is sometimes referred to
   as the <span class='red'>interactome</span>
 
 ### Data Sources
 
 - <span class='blue'>Yeast two-hybrid (Y2H)</span>
-- <span class='blue'>Affinity purification</span>
 - <span class='blue'>Tandem affinity purification coupled to mass spectometry
   (TAP-MS)</span>
+
+---
+
+## Protein-protein interaction networks
 
 ### Challenges
 
@@ -161,7 +170,6 @@ frameborder="0" allowfullscreen></iframe>-->
 - Affinity purification can be noisy (protein contamination.)
 - Overlap between Y2H is not 100%.
 
-
 ---
 
 ## Protein-protein interaction networks
@@ -170,23 +178,34 @@ Yeast Membrane Proteins Interaction Network (Babu lab)
 
 ![Yeast PPI](assets/img/Figure 3-new.png)
 
+---
 
+## Metabolic Networks
 
+### Definition
 
+> A metabolic network is the complete set of metabolic and physical processes
+> that determine the physiological and biochemical properties of a cell. As
+> such, these networks comprise the chemical reactions of metabolism, the
+> metabolic pathways, as well as the regulatory interactions that guide these
+> reactions. (Wikipedia)
 
+### Overview
 
+- Directed
+- Nodes: metabolites
+- Edges: biochemical reactions
 
+### Flux balance analysis (FBA)
 
-
-
-
-
-
-
-
-
-
-
+- *In silico* approach commonly used for metabolic network reconstruction.
+  Uses known stoichiometric information about metabolites for an organism.
+- Assumes that organism is making optimal use of resources.
+- Network parameters are chosen such that the steady-state biomass output or
+  grwoth rate is maximized.
+- Uses <span class='blue'>linear programming</span>.
+- Has been used successfully to make some predictions about affects of changes
+  on a metabolic network.
 
 
 ---
@@ -200,6 +219,7 @@ Yeast Membrane Proteins Interaction Network (Babu lab)
 - Ziv Bar-Joseph, Georg K Gerber, Tong Ihn Lee, Nicola J Rinaldi, Jane Y Yoo, François Robert, D Benjamin Gordon, Ernest Fraenkel, Tommi S Jaakkola, Richard A Young, David K Gifford,   (2003) Computational Discovery of Gene Modules And Regulatory Networks.  <em>Nature Biotechnology</em>  <strong>21</strong>  1337-1342  <a href="http://dx.doi.org/10.1038/nbt890">10.1038/nbt890</a>
 - Javier De Las Rivas, Celia Fontanillo, Fran Lewitter,   (2010) Protein–Protein Interactions Essentials: Key Concepts to Building And Analyzing Interactome Networks.  <em>Plos Computational Biology</em>  <strong>6</strong>  e1000807-NA  <a href="http://dx.doi.org/10.1371/journal.pcbi.1000807">10.1371/journal.pcbi.1000807</a>
 - Peter J. Park,   (2009) Chip–Seq: Advantages And Challenges of A Maturing Technology.  <em>Nature Reviews Genetics</em>  <strong>10</strong>  669-680  <a href="http://dx.doi.org/10.1038/nrg2641">10.1038/nrg2641</a>
+- Eytan Ruppin, Jason A Papin, Luis F de Figueiredo, Stefan Schuster,   (2010) Metabolic Reconstruction, Constraint-Based Analysis And Game Theory to Probe Genome-Scale Metabolic Networks.  <em>Current Opinion in Biotechnology</em>  <strong>21</strong>  502-510  <a href="http://dx.doi.org/10.1016/j.copbio.2010.07.002">10.1016/j.copbio.2010.07.002</a>
 - X. Zhu, M. Gerstein, M. Snyder,   (2007) Getting Connected: Analysis And Principles of Biological Networks.  <em>Genes & Development</em>  <strong>21</strong>  1010-1024  <a href="http://dx.doi.org/10.1101/gad.1528707">10.1101/gad.1528707</a>
 
 

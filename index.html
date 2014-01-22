@@ -108,6 +108,8 @@ understand different parts of an ecosystem, an organism, a cell, etc.</li>
 at things piecemeal...</li>
 <li>It is only by looking at how all of the parts work together (as a &quot;system&quot;)
 that we can truly understand how something works.</li>
+<li>Once the quality of networks are sufficient, they can also be used to make
+predictions.</li>
 </ul>
 
   </article>
@@ -219,6 +221,9 @@ genes.</li>
     <!--<iframe width="640" height="480" src="//www.youtube.com/embed/Ms_ehUVvKKk"
 frameborder="0" allowfullscreen></iframe>-->
 
+<p>Interleukin-1 binding to its receptor on a cell surface, created from
+structural data (Youtube).</p>
+
 <p><a href="http://www.youtube.com/watch?v=Ms_ehUVvKKk"><img src="http://img.youtube.com/vi/Ms_ehUVvKKk/0.jpg" alt="Protein interaction animation"></a></p>
 
   </article>
@@ -241,6 +246,7 @@ physical interactions</span> between proteins in a cell.</li>
 <li>Protein complexes</li>
 <li>Transiently interacting proteins</li>
 </ul></li>
+<li>Undirected</li>
 <li>The complete set of protein interactions in a cell is sometimes referred to
 as the <span class='red'>interactome</span></li>
 </ul>
@@ -249,12 +255,20 @@ as the <span class='red'>interactome</span></li>
 
 <ul>
 <li><span class='blue'>Yeast two-hybrid (Y2H)</span></li>
-<li><span class='blue'>Affinity purification</span></li>
 <li><span class='blue'>Tandem affinity purification coupled to mass spectometry
 (TAP-MS)</span></li>
 </ul>
 
-<h3>Challenges</h3>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Protein-protein interaction networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Challenges</h3>
 
 <ul>
 <li>Y2H data is collected <em>in vitro</em> and may not provide an accurate 
@@ -273,7 +287,7 @@ cell under normal conditions:
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-12" style="background:;">
   <hgroup>
     <h2>Protein-protein interaction networks</h2>
   </hgroup>
@@ -286,7 +300,47 @@ cell under normal conditions:
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-12" style="background:;">
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Metabolic Networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Definition</h3>
+
+<blockquote>
+<p>A metabolic network is the complete set of metabolic and physical processes
+that determine the physiological and biochemical properties of a cell. As
+such, these networks comprise the chemical reactions of metabolism, the
+metabolic pathways, as well as the regulatory interactions that guide these
+reactions. (Wikipedia)</p>
+</blockquote>
+
+<h3>Overview</h3>
+
+<ul>
+<li>Directed</li>
+<li>Nodes: metabolites</li>
+<li>Edges: biochemical reactions</li>
+</ul>
+
+<h3>Flux balance analysis (FBA)</h3>
+
+<ul>
+<li><em>In silico</em> approach commonly used for metabolic network reconstruction.
+Uses known stoichiometric information about metabolites for an organism.</li>
+<li>Assumes that organism is making optimal use of resources.</li>
+<li>Network parameters are chosen such that the steady-state biomass output or
+grwoth rate is maximized.</li>
+<li>Uses <span class='blue'>linear programming</span>.</li>
+<li>Has been used successfully to make some predictions about affects of changes
+on a metabolic network.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
   <hgroup>
     <h2>References</h2>
   </hgroup>
@@ -295,6 +349,7 @@ cell under normal conditions:
 <li>Ziv Bar-Joseph, Georg K Gerber, Tong Ihn Lee, Nicola J Rinaldi, Jane Y Yoo, François Robert, D Benjamin Gordon, Ernest Fraenkel, Tommi S Jaakkola, Richard A Young, David K Gifford,   (2003) Computational Discovery of Gene Modules And Regulatory Networks.  <em>Nature Biotechnology</em>  <strong>21</strong>  1337-1342  <a href="http://dx.doi.org/10.1038/nbt890">10.1038/nbt890</a></li>
 <li>Javier De Las Rivas, Celia Fontanillo, Fran Lewitter,   (2010) Protein–Protein Interactions Essentials: Key Concepts to Building And Analyzing Interactome Networks.  <em>Plos Computational Biology</em>  <strong>6</strong>  e1000807-NA  <a href="http://dx.doi.org/10.1371/journal.pcbi.1000807">10.1371/journal.pcbi.1000807</a></li>
 <li>Peter J. Park,   (2009) Chip–Seq: Advantages And Challenges of A Maturing Technology.  <em>Nature Reviews Genetics</em>  <strong>10</strong>  669-680  <a href="http://dx.doi.org/10.1038/nrg2641">10.1038/nrg2641</a></li>
+<li>Eytan Ruppin, Jason A Papin, Luis F de Figueiredo, Stefan Schuster,   (2010) Metabolic Reconstruction, Constraint-Based Analysis And Game Theory to Probe Genome-Scale Metabolic Networks.  <em>Current Opinion in Biotechnology</em>  <strong>21</strong>  502-510  <a href="http://dx.doi.org/10.1016/j.copbio.2010.07.002">10.1016/j.copbio.2010.07.002</a></li>
 <li>X. Zhu, M. Gerstein, M. Snyder,   (2007) Getting Connected: Analysis And Principles of Biological Networks.  <em>Genes &amp; Development</em>  <strong>21</strong>  1010-1024  <a href="http://dx.doi.org/10.1101/gad.1528707">10.1101/gad.1528707</a></li>
 </ul>
 
@@ -374,8 +429,20 @@ cell under normal conditions:
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='References'>
+        data-slide=12 title='Protein-protein interaction networks'>
          12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Metabolic Networks'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='References'>
+         14
       </a>
     </li>
   </ul>
