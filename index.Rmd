@@ -80,15 +80,14 @@ $(function() {
 7. Genetic interaction
 8. Gene regulatory
 
-**Basic goal**: understand cellular phenomena at a systems scale.
-
 ---
 
 ## Types of data used to construct biological networks
 
 1. Flow cytometry
-2. Expression data (Microarray, RNA-Seq)
+2. Expression (Microarray, RNA-Seq)
 3. TF binding (ChIP-chip, ChIP-Seq, etc)
+4. Protein interaction (Y2H, TAP-MS)
 
 ---
 
@@ -126,8 +125,10 @@ $(function() {
 
 ## Protein-protein interaction networks
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/Ms_ehUVvKKk"
-frameborder="0" allowfullscreen></iframe>
+<!--<iframe width="640" height="480" src="//www.youtube.com/embed/Ms_ehUVvKKk"
+frameborder="0" allowfullscreen></iframe>-->
+[![Protein interaction animation](http://img.youtube.com/vi/Ms_ehUVvKKk/0.jpg)](
+    http://www.youtube.com/watch?v=Ms_ehUVvKKk)
 
 ---
 
