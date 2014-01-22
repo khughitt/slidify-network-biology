@@ -126,6 +126,13 @@ $(function() {
 
 ## Protein-protein interaction networks
 
+<iframe width="640" height="480" src="//www.youtube.com/embed/Ms_ehUVvKKk"
+frameborder="0" allowfullscreen></iframe>
+
+---
+
+## Protein-protein interaction networks
+
 ### Overview
 
 - Protein-protein interation (PPI) networks describe direct <span class='red'>
@@ -140,6 +147,8 @@ $(function() {
 
 - <span class='blue'>Yeast two-hybrid (Y2H)</span>
 - <span class='blue'>Affinity purification</span>
+- <span class='blue'>Tandem affinity purification coupled to mass spectometry
+  (TAP-MS)</span>
 
 ### Challenges
 
@@ -150,6 +159,33 @@ $(function() {
   - Complexes that do not form *in vivo* may be found *in vitro*
 - Affinity purification can be noisy (protein contamination.)
 - Overlap between Y2H is not 100%.
+
+
+---
+
+## Protein-protein interaction networks
+
+Yeast Membrane Proteins Interaction Network (Babu lab)
+
+![Yeast PPI](assets/img/Figure 3-new.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ---

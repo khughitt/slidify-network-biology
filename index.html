@@ -71,8 +71,6 @@ $(function() {
 });
 </script>
 
-<!-- Slides start here -->
-
 <h2>Overview</h2>
 
   </article>
@@ -121,8 +119,9 @@ that we can truly understand how something works.</li>
     <h2>An analogy</h2>
   </hgroup>
   <article data-timings="">
-    <p><span class='caption'>source: <a href="http://onlyhdwallpapers.com/wallpaper/cars_golf_volkswagen_parts_desktop_1440x900_hd-wallpaper-44957.jpg">http://onlyhdwallpapers.com/wallpaper/cars_golf_volkswagen_parts_desktop_1440x900_hd-wallpaper-44957.jpg</a></span>
-<img src="assets/img/cars_golf_volkswagen_parts_desktop_1440x900_hd-wallpaper-44957.jpg" alt="car parts"></p>
+    <p><img src="assets/img/cars_golf_volkswagen_parts_desktop_1440x900_hd-wallpaper-44957.jpg" alt="car parts"></p>
+
+<div style='float: right; width: 38%; font-size: 12px;'>source: http://onlyhdwallpapers.com/wallpaper/cars_golf_volkswagen_parts_desktop_1440x900_hd-wallpaper-44957.jpg</div>
 
   </article>
   <!-- Presenter Notes -->
@@ -138,7 +137,7 @@ that we can truly understand how something works.</li>
 <li>Metabolic interactions</li>
 <li>Protein-protein interaction</li>
 <li>Co-expression</li>
-<li>Transcription-factor binding</li>
+<li>Transcription factor binding</li>
 <li>Protein-phosphorylation</li>
 <li>Genetic interaction</li>
 <li>Gene regulatory</li>
@@ -167,19 +166,34 @@ that we can truly understand how something works.</li>
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>Transcription-factor binding networks</h2>
+    <h2>Transcription factor binding networks</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>Chromatin immunoprecipitation (ChIP)
+    <h3>Overview</h3>
 
 <ul>
-<li>Provides information on <em>in vivo</em> protein-DNA binding 
-associations.</li>
+<li>TF binding data provides information of gene <span class='red'>regulatory 
+relationships.</span></li>
+<li>Which proteins regulate which genes?</li>
+</ul>
+
+<h3>Chromatin immunoprecipitation (ChIP)</h3>
+
+<ul>
+<li>Provides information on <em>in vivo</em> protein-DNA binding associations.</li>
 <li>Antibodies targeting specific proteins are used to pull-down proteins in
 a sample and then associated DNA fragments measured.</li>
-<li>E.g. ChIP-chip and ChIP-Seq</li>
-</ul></li>
+<li>E.g. <span class='blue'>ChIP-chip</span> and <span class='blue'>ChIP-Seq
+</span>.</li>
+</ul>
+
+<h3>Challenges</h3>
+
+<ul>
+<li>Not all binding sites are near genes they regulate; may exist near unrelated
+genes.</li>
+<li>Binding sites may be either redundant or not functionally active.</li>
+<li>Role of binding site may be modified by conditions.</li>
 </ul>
 
   </article>
@@ -188,10 +202,97 @@ a sample and then associated DNA fragments measured.</li>
 
 <slide class="" id="slide-8" style="background:;">
   <hgroup>
+    <h2>Transcription factor binding networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/nbt890-F1.gif" alt="tf network">
+<span class='caption'>Bar-Joseph et al. (2003)</span></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Protein-protein interaction networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe width="640" height="480" src="//www.youtube.com/embed/Ms_ehUVvKKk"
+frameborder="0" allowfullscreen></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Protein-protein interaction networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Overview</h3>
+
+<ul>
+<li>Protein-protein interation (PPI) networks describe direct <span class='red'>
+physical interactions</span> between proteins in a cell.</li>
+<li>This includes:
+
+<ul>
+<li>Protein complexes</li>
+<li>Transiently interacting proteins</li>
+</ul></li>
+<li>The complete set of protein interactions in a cell is sometimes referred to
+as the <span class='red'>interactome</span></li>
+</ul>
+
+<h3>Data Sources</h3>
+
+<ul>
+<li><span class='blue'>Yeast two-hybrid (Y2H)</span></li>
+<li><span class='blue'>Affinity purification</span></li>
+<li><span class='blue'>Tandem affinity purification coupled to mass spectometry
+(TAP-MS)</span></li>
+</ul>
+
+<h3>Challenges</h3>
+
+<ul>
+<li>Y2H data is collected <em>in vitro</em> and may not provide an accurate 
+reprensentation of the catalog of interactions that actually take place in a 
+cell under normal conditions:
+
+<ul>
+<li>Real interactions may not hold up and will be missed</li>
+<li>Complexes that do not form <em>in vivo</em> may be found <em>in vitro</em></li>
+</ul></li>
+<li>Affinity purification can be noisy (protein contamination.)</li>
+<li>Overlap between Y2H is not 100%.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Protein-protein interaction networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Yeast Membrane Proteins Interaction Network (Babu lab)</p>
+
+<p><img src="assets/img/Figure%203-new.png" alt="Yeast PPI"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
     <h2>References</h2>
   </hgroup>
   <article data-timings="">
     <ul>
+<li>Ziv Bar-Joseph, Georg K Gerber, Tong Ihn Lee, Nicola J Rinaldi, Jane Y Yoo, François Robert, D Benjamin Gordon, Ernest Fraenkel, Tommi S Jaakkola, Richard A Young, David K Gifford,   (2003) Computational Discovery of Gene Modules And Regulatory Networks.  <em>Nature Biotechnology</em>  <strong>21</strong>  1337-1342  <a href="http://dx.doi.org/10.1038/nbt890">10.1038/nbt890</a></li>
+<li>Javier De Las Rivas, Celia Fontanillo, Fran Lewitter,   (2010) Protein–Protein Interactions Essentials: Key Concepts to Building And Analyzing Interactome Networks.  <em>Plos Computational Biology</em>  <strong>6</strong>  e1000807-NA  <a href="http://dx.doi.org/10.1371/journal.pcbi.1000807">10.1371/journal.pcbi.1000807</a></li>
 <li>Peter J. Park,   (2009) Chip–Seq: Advantages And Challenges of A Maturing Technology.  <em>Nature Reviews Genetics</em>  <strong>10</strong>  669-680  <a href="http://dx.doi.org/10.1038/nrg2641">10.1038/nrg2641</a></li>
 <li>X. Zhu, M. Gerstein, M. Snyder,   (2007) Getting Connected: Analysis And Principles of Biological Networks.  <em>Genes &amp; Development</em>  <strong>21</strong>  1010-1024  <a href="http://dx.doi.org/10.1101/gad.1528707">10.1101/gad.1528707</a></li>
 </ul>
@@ -242,14 +343,38 @@ a sample and then associated DNA fragments measured.</li>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Transcription-factor binding networks'>
+        data-slide=7 title='Transcription factor binding networks'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='References'>
+        data-slide=8 title='Transcription factor binding networks'>
          8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Protein-protein interaction networks'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Protein-protein interaction networks'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Protein-protein interaction networks'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='References'>
+         12
       </a>
     </li>
   </ul>
