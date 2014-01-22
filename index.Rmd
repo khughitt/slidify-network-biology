@@ -137,7 +137,7 @@ structural data (Youtube).
 
 ### Overview
 
-- Protein-protein interation (PPI) networks describe direct <span class='red'>
+- Protein-protein interaction (PPI) networks describe direct <span class='red'>
   physical interactions</span> between proteins in a cell.
 - This includes:
   - Protein complexes
@@ -159,7 +159,7 @@ structural data (Youtube).
 ### Challenges
 
 - Y2H data is collected *in vitro* and may not provide an accurate 
-  reprensentation of the catalog of interactions that actually take place in a 
+  representation of the catalog of interactions that actually take place in a 
   cell under normal conditions:
   - Real interactions may not hold up and will be missed
   - Complexes that do not form *in vivo* may be found *in vitro*
@@ -219,7 +219,7 @@ Another view of the human metabolome...
   Uses known stoichiometric information about metabolites for an organism.
 - Assumes that organism is making optimal use of resources.
 - Network parameters are chosen such that the steady-state biomass output or
-  grwoth rate is maximized.
+  growth rate is maximized.
 - Uses <span class='blue'>linear programming</span>.
 - Has been used successfully to make some predictions about affects of changes
   on a metabolic network.
@@ -236,7 +236,7 @@ Another view of the human metabolome...
 
 ---
 
-## Approaches used to construct biologial networks
+## Approaches used to construct biological networks
 
 @TODO
 
@@ -251,7 +251,7 @@ Another view of the human metabolome...
 It's usually not enough to just build a network and print a pretty picture --
 or at least, it shouldn't be enough -- instead a useful network should provide
 some information about the system being investigated which is not immediately
-available by looking at its componenet in isolation.
+available by looking at its component in isolation.
 
 Depending on the type of network being investigated, different approaches may
 be adopted:
