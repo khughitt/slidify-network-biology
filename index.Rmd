@@ -11,7 +11,7 @@ mode        : selfcontained # {standalone, draft}
 github:
     user: khughitt
     repo: slidify-network-biology
----.segue .dark
+---
 
 <!-- Custom Styles -->
 <style type='text/css'>
@@ -24,7 +24,7 @@ github:
         max-width: 964px;
     }
     slide a {border-bottom: none;}
-    .references li { font-size: 18px; }
+    .references li { font-size: 14px; }
 </style>
 
 <!-- Custom JavaScript -->
@@ -34,10 +34,6 @@ $(function() {
     $("p:has(img)").addClass('centered');
 });
 </script>
-
-## Overview
-
----
 
 ## The Big Picture
 
@@ -229,17 +225,45 @@ Another view of the human metabolome...
 
 ## Co-expression Networks
 
-@TODO
+### Overview
 
----.segue .dark
+- Undirected
+- Nodes: gene products
+- Edges: co-expression relationships
 
-## Network construction
+### Data sources
+
+- Microarray
+- RNA-Seq
 
 ---
 
-## Approaches used to construct biological networks
+## Co-expression Networks
 
-@TODO
+### Approaches
+
+- Bayesian Networks (Friedman et al., 2000)
+- Relevance Networks (Butte & Kohane, 2000)
+- Correlation Networks (Stuart et al. 2003; Zhang & Horvath, 2005)
+- Gaussian Graphical Models (Schäfer & Strimmer, 2005)
+- Canonical correlation analysis (Hong et al. 2013)
+
+### Challenges
+
+- Interpretation of co-expression networks is not as straight-forward as some
+  of the other types of networks; gene products may be co-expressed because
+  they are regulated by same TF, because they interact closely, etc.
+- How correlated should expression profiles be before gene products are
+  considered co-expressed?
+- Co-expression status can be highly variable with time and condition.
+
+---
+
+## Co-expression Networks
+
+T. cruzi Co-expression network (Constructed via WGCNA)
+
+![T. cruzi Co-expression network](assets/img/RNABP.png)
 
 ---.segue .dark
 
@@ -264,7 +288,7 @@ be adopted:
 - Comparative network analysis
 - Network integration
 
----
+---.references
 
 ## References
 
@@ -276,12 +300,19 @@ citep('10.1038/nrg2641')
 citep('10.1038/nbt890')
 citep('10.1371/journal.pcbi.1000807')
 citep('10.1016/j.copbio.2010.07.002')
+citep('10.1089/106652700750050961')
+citep('10.2202/1544-6115.1128')
+citep('10.1093/bioinformatics/bti06')
+citep('10.1093/nar/gkt145')
 ```
 
 ```{r refs_output, echo=FALSE, results='asis'}
 bibliography('html')
 ```
-
+- Butte, a J., & Kohane, I. S. (2000). Mutual information relevance networks:
+functional genomic clustering using pairwise entropy measurements. Pacific
+Symposium on Biocomputing. Pacific Symposium on Biocomputing, 418–29. Retrieved
+from http://www.ncbi.nlm.nih.gov/pubmed/10902190
 
 
 

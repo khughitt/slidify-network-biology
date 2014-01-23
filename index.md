@@ -11,7 +11,7 @@ mode        : selfcontained # {standalone, draft}
 github:
     user: khughitt
     repo: slidify-network-biology
----.segue .dark
+---
 
 <!-- Custom Styles -->
 <style type='text/css'>
@@ -24,7 +24,7 @@ github:
         max-width: 964px;
     }
     slide a {border-bottom: none;}
-    .references li { font-size: 18px; }
+    .references li { font-size: 14px; }
 </style>
 
 <!-- Custom JavaScript -->
@@ -34,10 +34,6 @@ $(function() {
     $("p:has(img)").addClass('centered');
 });
 </script>
-
-## Overview
-
----
 
 ## The Big Picture
 
@@ -229,17 +225,45 @@ Another view of the human metabolome...
 
 ## Co-expression Networks
 
-@TODO
+### Overview
 
----.segue .dark
+- Undirected
+- Nodes: gene products
+- Edges: co-expression relationships
 
-## Network construction
+### Data sources
+
+- Microarray
+- RNA-Seq
 
 ---
 
-## Approaches used to construct biological networks
+## Co-expression Networks
 
-@TODO
+### Approaches
+
+- Bayesian Networks (Friedman et al., 2000)
+- Relevance Networks (Butte & Kohane, 2000)
+- Correlation Networks (Stuart et al. 2003; Zhang & Horvath, 2005)
+- Gaussian Graphical Models (Schäfer & Strimmer, 2005)
+- Canonical correlation analysis (Hong et al. 2013)
+
+### Challenges
+
+- Interpretation of co-expression networks is not as straight-forward as some
+  of the other types of networks; gene products may be co-expressed because
+  they are regulated by same TF, because they interact closely, etc.
+- How correlated should expression profiles be before gene products are
+  considered co-expressed?
+- Co-expression status can be highly variable with time and condition.
+
+---
+
+## Co-expression Networks
+
+T. cruzi Co-expression network (Constructed via WGCNA)
+
+![T. cruzi Co-expression network](assets/img/RNABP.png)
 
 ---.segue .dark
 
@@ -264,7 +288,7 @@ be adopted:
 - Comparative network analysis
 - Network integration
 
----
+---.references
 
 ## References
 
@@ -274,11 +298,18 @@ be adopted:
 
 - Ziv Bar-Joseph, Georg K Gerber, Tong Ihn Lee, Nicola J Rinaldi, Jane Y Yoo, François Robert, D Benjamin Gordon, Ernest Fraenkel, Tommi S Jaakkola, Richard A Young, David K Gifford,   (2003) Computational Discovery of Gene Modules And Regulatory Networks.  <em>Nature Biotechnology</em>  <strong>21</strong>  1337-1342  <a href="http://dx.doi.org/10.1038/nbt890">10.1038/nbt890</a>
 - Javier De Las Rivas, Celia Fontanillo, Fran Lewitter,   (2010) Protein–Protein Interactions Essentials: Key Concepts to Building And Analyzing Interactome Networks.  <em>Plos Computational Biology</em>  <strong>6</strong>  e1000807-NA  <a href="http://dx.doi.org/10.1371/journal.pcbi.1000807">10.1371/journal.pcbi.1000807</a>
+- Nir Friedman, Michal Linial, Iftach Nachman, Dana Pe'er,   (2000) Using Bayesian Networks to Analyze Expression Data.  <em>Journal of Computational Biology</em>  <strong>7</strong>  601-620  <a href="http://dx.doi.org/10.1089/106652700750050961">10.1089/106652700750050961</a>
+- S. Hong, X. Chen, L. Jin, M. Xiong,   (2013) Canonical Correlation Analysis For Rna-Seq co-Expression Networks.  <em>Nucleic Acids Research</em>  <strong>41</strong>  e95-e95  <a href="http://dx.doi.org/10.1093/nar/gkt145">10.1093/nar/gkt145</a>
 - Peter J. Park,   (2009) Chip–Seq: Advantages And Challenges of A Maturing Technology.  <em>Nature Reviews Genetics</em>  <strong>10</strong>  669-680  <a href="http://dx.doi.org/10.1038/nrg2641">10.1038/nrg2641</a>
 - Eytan Ruppin, Jason A Papin, Luis F de Figueiredo, Stefan Schuster,   (2010) Metabolic Reconstruction, Constraint-Based Analysis And Game Theory to Probe Genome-Scale Metabolic Networks.  <em>Current Opinion in Biotechnology</em>  <strong>21</strong>  502-510  <a href="http://dx.doi.org/10.1016/j.copbio.2010.07.002">10.1016/j.copbio.2010.07.002</a>
+- unknown unknown,   (unknown) Unknown.  <em>Unknown</em>
+- Bin Zhang, Steve Horvath,   (2005) A General Framework For Weighted Gene co-Expression Network Analysis.  <em>Statistical Applications in Genetics And Molecular Biology</em>  <strong>4</strong>  <a href="http://dx.doi.org/10.2202/1544-6115.1128">10.2202/1544-6115.1128</a>
 - X. Zhu, M. Gerstein, M. Snyder,   (2007) Getting Connected: Analysis And Principles of Biological Networks.  <em>Genes & Development</em>  <strong>21</strong>  1010-1024  <a href="http://dx.doi.org/10.1101/gad.1528707">10.1101/gad.1528707</a>
 
-
+- Butte, a J., & Kohane, I. S. (2000). Mutual information relevance networks:
+functional genomic clustering using pairwise entropy measurements. Pacific
+Symposium on Biocomputing. Pacific Symposium on Biocomputing, 418–29. Retrieved
+from http://www.ncbi.nlm.nih.gov/pubmed/10902190
 
 
 
