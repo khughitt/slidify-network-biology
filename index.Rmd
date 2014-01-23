@@ -93,6 +93,13 @@ $(function() {
   relationships.</span>
 - Which genes (transcription factors) regulate which other genes?
 
+### Data Sources
+
+- Protein-DNA binding (ChIP)
+- Expression (microarray, RNA-Seq)
+
+## Transcription factor binding networks
+
 ### Chromatin immunoprecipitation (ChIP)
 
 - Provides information on *in vivo* protein-DNA binding associations.
@@ -100,6 +107,17 @@ $(function() {
   a sample and then associated DNA fragments measured.
 - E.g. <span class='blue'>ChIP-chip</span> and <span class='blue'>ChIP-Seq
   </span>.
+
+## Transcription factor binding networks
+
+### Combining with expression data
+
+- Another approach is to combine ChIP data with expression data such as
+  microarray data.
+    - Expression profile correlations helps strengthen the relationship between
+      TF's and the genes they regulate.
+    - ChIP provides the directionality in the relationship.
+    - See *De Smet & Marchal* (2010) for a review.
 
 ### Challenges
 
@@ -297,6 +315,7 @@ library(knitcitations)
 cleanbib()
 citep('10.1101/gad.1528707')
 citep('10.1038/nrg2641')
+citep('10.1038/nrmicro2419')
 citep('10.1038/nbt890')
 citep('10.1371/journal.pcbi.1000807')
 citep('10.1016/j.copbio.2010.07.002')
@@ -313,6 +332,4 @@ bibliography('html')
 functional genomic clustering using pairwise entropy measurements. Pacific
 Symposium on Biocomputing. Pacific Symposium on Biocomputing, 418–29. Retrieved
 from http://www.ncbi.nlm.nih.gov/pubmed/10902190
-
-
 

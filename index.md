@@ -93,6 +93,13 @@ $(function() {
   relationships.</span>
 - Which genes (transcription factors) regulate which other genes?
 
+### Data Sources
+
+- Protein-DNA binding (ChIP)
+- Expression (microarray, RNA-Seq)
+
+## Transcription factor binding networks
+
 ### Chromatin immunoprecipitation (ChIP)
 
 - Provides information on *in vivo* protein-DNA binding associations.
@@ -100,6 +107,17 @@ $(function() {
   a sample and then associated DNA fragments measured.
 - E.g. <span class='blue'>ChIP-chip</span> and <span class='blue'>ChIP-Seq
   </span>.
+
+## Transcription factor binding networks
+
+### Combining with expression data
+
+- Another approach is to combine ChIP data with expression data such as
+  microarray data.
+    - Expression profile correlations helps strengthen the relationship between
+      TF's and the genes they regulate.
+    - ChIP provides the directionality in the relationship.
+    - See *De Smet & Marchal* (2010) for a review.
 
 ### Challenges
 
@@ -298,6 +316,7 @@ be adopted:
 
 - Ziv Bar-Joseph, Georg K Gerber, Tong Ihn Lee, Nicola J Rinaldi, Jane Y Yoo, François Robert, D Benjamin Gordon, Ernest Fraenkel, Tommi S Jaakkola, Richard A Young, David K Gifford,   (2003) Computational Discovery of Gene Modules And Regulatory Networks.  <em>Nature Biotechnology</em>  <strong>21</strong>  1337-1342  <a href="http://dx.doi.org/10.1038/nbt890">10.1038/nbt890</a>
 - Javier De Las Rivas, Celia Fontanillo, Fran Lewitter,   (2010) Protein–Protein Interactions Essentials: Key Concepts to Building And Analyzing Interactome Networks.  <em>Plos Computational Biology</em>  <strong>6</strong>  e1000807-NA  <a href="http://dx.doi.org/10.1371/journal.pcbi.1000807">10.1371/journal.pcbi.1000807</a>
+- Riet De Smet, Kathleen Marchal,   (2010) Advantages And Limitations of Current Network Inference Methods.  <em>Nature Reviews Microbiology</em>  <a href="http://dx.doi.org/10.1038/nrmicro2419">10.1038/nrmicro2419</a>
 - Nir Friedman, Michal Linial, Iftach Nachman, Dana Pe'er,   (2000) Using Bayesian Networks to Analyze Expression Data.  <em>Journal of Computational Biology</em>  <strong>7</strong>  601-620  <a href="http://dx.doi.org/10.1089/106652700750050961">10.1089/106652700750050961</a>
 - S. Hong, X. Chen, L. Jin, M. Xiong,   (2013) Canonical Correlation Analysis For Rna-Seq co-Expression Networks.  <em>Nucleic Acids Research</em>  <strong>41</strong>  e95-e95  <a href="http://dx.doi.org/10.1093/nar/gkt145">10.1093/nar/gkt145</a>
 - Peter J. Park,   (2009) Chip–Seq: Advantages And Challenges of A Maturing Technology.  <em>Nature Reviews Genetics</em>  <strong>10</strong>  669-680  <a href="http://dx.doi.org/10.1038/nrg2641">10.1038/nrg2641</a>
@@ -310,6 +329,4 @@ be adopted:
 functional genomic clustering using pairwise entropy measurements. Pacific
 Symposium on Biocomputing. Pacific Symposium on Biocomputing, 418–29. Retrieved
 from http://www.ncbi.nlm.nih.gov/pubmed/10902190
-
-
 
