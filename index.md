@@ -285,7 +285,7 @@ Another view of the human metabolome...
 
 T. cruzi Co-expression network (Constructed via WGCNA)
 
-![T. cruzi Co-expression network](assets/img/RNABP.png)
+![T. cruzi Co-expression network](assets/img/RNABP.jpg)
 
 ---.segue .dark
 
