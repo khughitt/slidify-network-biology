@@ -98,6 +98,8 @@ $(function() {
 - Protein-DNA binding (ChIP)
 - Expression (microarray, RNA-Seq)
 
+---
+
 ## Transcription factor binding networks
 
 ### Chromatin immunoprecipitation (ChIP)
@@ -107,6 +109,8 @@ $(function() {
   a sample and then associated DNA fragments measured.
 - E.g. <span class='blue'>ChIP-chip</span> and <span class='blue'>ChIP-Seq
   </span>.
+
+---
 
 ## Transcription factor binding networks
 
