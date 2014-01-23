@@ -25,6 +25,7 @@ github:
     }
     slide a {border-bottom: none;}
     .references li { font-size: 14px; }
+    .references li p { font-size: 14px; }
 </style>
 
 <!-- Custom JavaScript -->
@@ -64,34 +65,53 @@ $(function() {
 ## Types of Biological Networks
 
 1. Cell signalling
-2. Metabolic interactions
-3. Protein-protein interaction
-4. Co-expression
-5. Transcription factor binding
+2. Gene regulatory
+3. Co-expression
+4. Protein-protein interaction
+5. Metabolic interaction
 6. Protein-phosphorylation
 7. Genetic interaction
-8. Gene regulatory
+
+---
+
+## Types of Biological Networks
+
+1. Cell signalling
+2. <span class='blue'>Gene regulatory</span>
+3. <span class='blue'>Co-expression</span>
+4. <span class='blue'>Protein-protein interaction</span>
+5. <span class='blue'>Metabolic interaction</span>
+6. Protein-phosphorylation
+7. Genetic interaction
 
 ---
 
 ## Types of data used to construct biological networks
+
+A non-comprehensive list of the types of data used to construct biological
+networks:
 
 1. Flow cytometry
 2. Expression (Microarray, RNA-Seq)
 3. TF binding (ChIP-chip, ChIP-Seq, etc)
 4. Protein interaction (Y2H, TAP-MS)
 5. Metabolite concentrations (NMR, LC/MS, etc)
+6. Perturbation
+7. Annotation data (e.g. motifs and domains)
 
 ---
 
-## Transcription factor binding networks
+## Gene Regulatory Networks (GRNs)
 
 ### Overview
 
-- Directed.
-- TF binding data provides information of gene <span class='red'>regulatory 
-  relationships.</span>
-- Which genes (transcription factors) regulate which other genes?
+GRNs are one of the most widely studied types of biological networks. There are
+many different types of GRNs, and numerous methods have been developed to study
+them.
+
+- Directed
+- Nodes: Genes/Transcription Factors (TFs)
+- Edges: Regulatory relationships
 
 ### Data Sources
 
@@ -100,9 +120,25 @@ $(function() {
 
 ---
 
-## Transcription factor binding networks
+## Gene Regulatory Networks (GRNs)
 
-### Chromatin immunoprecipitation (ChIP)
+### Approaches
+
+- Boolean networks
+- Probabilistic Boolean network (PBN)
+- Bayesian networks
+- Ordinary differential equations (ODEs)
+- Network component analysis (NCA)
+
+---
+
+## Transcription factoring binding networks
+
+Transcription factor binding networks are one type of GRN that can be built.
+These networks use information about protein-DNA interactions to infer
+regulatory relationships.
+
+#### Chromatin immunoprecipitation (ChIP)
 
 - Provides information on *in vivo* protein-DNA binding associations.
 - Antibodies targeting specific proteins are used to pull-down proteins in
@@ -112,7 +148,7 @@ $(function() {
 
 ---
 
-## Transcription factor binding networks
+## Transcription factoring binding networks
 
 ### Combining with expression data
 
@@ -132,10 +168,68 @@ $(function() {
 
 ---
 
-## Transcription factor binding networks
+## Gene Regulatory Networks (GRNs)
 
 ![tf network](assets/img/nbt890-F1.gif)
 <span class='caption'>Bar-Joseph et al. (2003)</span>
+
+---
+
+## Gene Regulatory Networks (GRNs)
+
+[Dialogue for Reverse Engineering Assessments and Methods (DREAM)](http://www.the-dream-project.org/)
+
+> "DREAM (Dialogue for Reverse Engineering Assessments and Methods) poses
+> fundamental questions about systems biology, and invites participants to
+> propose solutions. The main objective is to catalyze the interaction between
+> theory and experiment, specifically in the area of cellular network inference
+> and quantitative model building. DREAM challenges address how we can assess
+> the quality of our descriptions of networks that underlie biological systems,
+> and of our predictions of the outcomes of novel experiments." (DREAM website)
+
+---
+
+## Co-expression Networks
+
+### Overview
+
+- Undirected
+- Nodes: gene products
+- Edges: co-expression relationships
+
+### Data sources
+
+- Microarray
+- RNA-Seq
+
+---
+
+## Co-expression Networks
+
+### Approaches
+
+- Bayesian Networks (Friedman et al., 2000)
+- Relevance Networks (Butte & Kohane, 2000)
+- Correlation Networks (Stuart et al. 2003; Zhang & Horvath, 2005)
+- Gaussian Graphical Models (Schäfer & Strimmer, 2005)
+- Canonical correlation analysis (Hong et al. 2013)
+
+### Challenges
+
+- Interpretation of co-expression networks is not as straight-forward as some
+  of the other types of networks; gene products may be co-expressed because
+  they are regulated by same TF, because they interact closely, etc.
+- How correlated should expression profiles be before gene products are
+  considered co-expressed?
+- Co-expression status can be highly variable with time and condition.
+
+---
+
+## Co-expression Networks
+
+T. cruzi Co-expression network (Constructed via WGCNA)
+
+![T. cruzi Co-expression network](assets/img/RNABP.jpg)
 
 ---
 
@@ -243,50 +337,6 @@ Another view of the human metabolome...
 - Has been used successfully to make some predictions about affects of changes
   on a metabolic network.
 
----
-
-## Co-expression Networks
-
-### Overview
-
-- Undirected
-- Nodes: gene products
-- Edges: co-expression relationships
-
-### Data sources
-
-- Microarray
-- RNA-Seq
-
----
-
-## Co-expression Networks
-
-### Approaches
-
-- Bayesian Networks (Friedman et al., 2000)
-- Relevance Networks (Butte & Kohane, 2000)
-- Correlation Networks (Stuart et al. 2003; Zhang & Horvath, 2005)
-- Gaussian Graphical Models (Schäfer & Strimmer, 2005)
-- Canonical correlation analysis (Hong et al. 2013)
-
-### Challenges
-
-- Interpretation of co-expression networks is not as straight-forward as some
-  of the other types of networks; gene products may be co-expressed because
-  they are regulated by same TF, because they interact closely, etc.
-- How correlated should expression profiles be before gene products are
-  considered co-expressed?
-- Co-expression status can be highly variable with time and condition.
-
----
-
-## Co-expression Networks
-
-T. cruzi Co-expression network (Constructed via WGCNA)
-
-![T. cruzi Co-expression network](assets/img/RNABP.jpg)
-
 ---.segue .dark
 
 ## Biological network analysis
@@ -325,7 +375,6 @@ citep('10.1371/journal.pcbi.1000807')
 citep('10.1016/j.copbio.2010.07.002')
 citep('10.1089/106652700750050961')
 citep('10.2202/1544-6115.1128')
-citep('10.1093/bioinformatics/bti06')
 citep('10.1093/nar/gkt145')
 ```
 

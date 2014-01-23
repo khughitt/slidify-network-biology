@@ -59,6 +59,7 @@
     }
     slide a {border-bottom: none;}
     .references li { font-size: 14px; }
+    .references li p { font-size: 14px; }
 </style>
 
 <!-- Custom JavaScript -->
@@ -120,13 +121,12 @@ predictions.</li>
   <article data-timings="">
     <ol>
 <li>Cell signalling</li>
-<li>Metabolic interactions</li>
-<li>Protein-protein interaction</li>
+<li>Gene regulatory</li>
 <li>Co-expression</li>
-<li>Transcription factor binding</li>
+<li>Protein-protein interaction</li>
+<li>Metabolic interaction</li>
 <li>Protein-phosphorylation</li>
 <li>Genetic interaction</li>
-<li>Gene regulatory</li>
 </ol>
 
   </article>
@@ -135,15 +135,17 @@ predictions.</li>
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2>Types of data used to construct biological networks</h2>
+    <h2>Types of Biological Networks</h2>
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Flow cytometry</li>
-<li>Expression (Microarray, RNA-Seq)</li>
-<li>TF binding (ChIP-chip, ChIP-Seq, etc)</li>
-<li>Protein interaction (Y2H, TAP-MS)</li>
-<li>Metabolite concentrations (NMR, LC/MS, etc)</li>
+<li>Cell signalling</li>
+<li><span class='blue'>Gene regulatory</span></li>
+<li><span class='blue'>Co-expression</span></li>
+<li><span class='blue'>Protein-protein interaction</span></li>
+<li><span class='blue'>Metabolic interaction</span></li>
+<li>Protein-phosphorylation</li>
+<li>Genetic interaction</li>
 </ol>
 
   </article>
@@ -152,16 +154,41 @@ predictions.</li>
 
 <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    <h2>Transcription factor binding networks</h2>
+    <h2>Types of data used to construct biological networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>A non-comprehensive list of the types of data used to construct biological
+networks:</p>
+
+<ol>
+<li>Flow cytometry</li>
+<li>Expression (Microarray, RNA-Seq)</li>
+<li>TF binding (ChIP-chip, ChIP-Seq, etc)</li>
+<li>Protein interaction (Y2H, TAP-MS)</li>
+<li>Metabolite concentrations (NMR, LC/MS, etc)</li>
+<li>Perturbation</li>
+<li>Annotation data (e.g. motifs and domains)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Gene Regulatory Networks (GRNs)</h2>
   </hgroup>
   <article data-timings="">
     <h3>Overview</h3>
 
+<p>GRNs are one of the most widely studied types of biological networks. There are
+many different types of GRNs, and numerous methods have been developed to study
+them.</p>
+
 <ul>
-<li>Directed.</li>
-<li>TF binding data provides information of gene <span class='red'>regulatory 
-relationships.</span></li>
-<li>Which genes (transcription factors) regulate which other genes?</li>
+<li>Directed</li>
+<li>Nodes: Genes/Transcription Factors (TFs)</li>
+<li>Edges: Regulatory relationships</li>
 </ul>
 
 <h3>Data Sources</h3>
@@ -175,12 +202,35 @@ relationships.</span></li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-7" style="background:;">
+<slide class="" id="slide-8" style="background:;">
   <hgroup>
-    <h2>Transcription factor binding networks</h2>
+    <h2>Gene Regulatory Networks (GRNs)</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Chromatin immunoprecipitation (ChIP)</h3>
+    <h3>Approaches</h3>
+
+<ul>
+<li>Boolean networks</li>
+<li>Probabilistic Boolean network (PBN)</li>
+<li>Bayesian networks</li>
+<li>Ordinary differential equations (ODEs)</li>
+<li>Network component analysis (NCA)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Transcription factoring binding networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Transcription factor binding networks are one type of GRN that can be built.
+These networks use information about protein-DNA interactions to infer
+regulatory relationships.</p>
+
+<h4>Chromatin immunoprecipitation (ChIP)</h4>
 
 <ul>
 <li>Provides information on <em>in vivo</em> protein-DNA binding associations.</li>
@@ -194,9 +244,9 @@ a sample and then associated DNA fragments measured.</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-8" style="background:;">
+<slide class="" id="slide-10" style="background:;">
   <hgroup>
-    <h2>Transcription factor binding networks</h2>
+    <h2>Transcription factoring binding networks</h2>
   </hgroup>
   <article data-timings="">
     <h3>Combining with expression data</h3>
@@ -226,9 +276,9 @@ genes.</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-9" style="background:;">
+<slide class="" id="slide-11" style="background:;">
   <hgroup>
-    <h2>Transcription factor binding networks</h2>
+    <h2>Gene Regulatory Networks (GRNs)</h2>
   </hgroup>
   <article data-timings="">
     <p><img src="assets/img/nbt890-F1.gif" alt="tf network">
@@ -238,7 +288,95 @@ genes.</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-10" style="background:;">
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Gene Regulatory Networks (GRNs)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="http://www.the-dream-project.org/">Dialogue for Reverse Engineering Assessments and Methods (DREAM)</a></p>
+
+<blockquote>
+<p>&quot;DREAM (Dialogue for Reverse Engineering Assessments and Methods) poses
+fundamental questions about systems biology, and invites participants to
+propose solutions. The main objective is to catalyze the interaction between
+theory and experiment, specifically in the area of cellular network inference
+and quantitative model building. DREAM challenges address how we can assess
+the quality of our descriptions of networks that underlie biological systems,
+and of our predictions of the outcomes of novel experiments.&quot; (DREAM website)</p>
+</blockquote>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Co-expression Networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Overview</h3>
+
+<ul>
+<li>Undirected</li>
+<li>Nodes: gene products</li>
+<li>Edges: co-expression relationships</li>
+</ul>
+
+<h3>Data sources</h3>
+
+<ul>
+<li>Microarray</li>
+<li>RNA-Seq</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Co-expression Networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Approaches</h3>
+
+<ul>
+<li>Bayesian Networks (Friedman et al., 2000)</li>
+<li>Relevance Networks (Butte &amp; Kohane, 2000)</li>
+<li>Correlation Networks (Stuart et al. 2003; Zhang &amp; Horvath, 2005)</li>
+<li>Gaussian Graphical Models (Schäfer &amp; Strimmer, 2005)</li>
+<li>Canonical correlation analysis (Hong et al. 2013)</li>
+</ul>
+
+<h3>Challenges</h3>
+
+<ul>
+<li>Interpretation of co-expression networks is not as straight-forward as some
+of the other types of networks; gene products may be co-expressed because
+they are regulated by same TF, because they interact closely, etc.</li>
+<li>How correlated should expression profiles be before gene products are
+considered co-expressed?</li>
+<li>Co-expression status can be highly variable with time and condition.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Co-expression Networks</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>T. cruzi Co-expression network (Constructed via WGCNA)</p>
+
+<p><img src="assets/img/RNABP.jpg" alt="T. cruzi Co-expression network"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
   <hgroup>
     <h2>Protein-protein interaction networks</h2>
   </hgroup>
@@ -255,7 +393,7 @@ structural data (Youtube).</p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-17" style="background:;">
   <hgroup>
     <h2>Protein-protein interaction networks</h2>
   </hgroup>
@@ -288,7 +426,7 @@ as the <span class='red'>interactome</span></li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-12" style="background:;">
+<slide class="" id="slide-18" style="background:;">
   <hgroup>
     <h2>Protein-protein interaction networks</h2>
   </hgroup>
@@ -312,7 +450,7 @@ cell under normal conditions:
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-13" style="background:;">
+<slide class="" id="slide-19" style="background:;">
   <hgroup>
     <h2>Protein-protein interaction networks</h2>
   </hgroup>
@@ -325,7 +463,7 @@ cell under normal conditions:
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-14" style="background:;">
+<slide class="" id="slide-20" style="background:;">
   <hgroup>
     <h2>Metabolic Networks</h2>
   </hgroup>
@@ -352,7 +490,7 @@ reactions. (Wikipedia)</p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-15" style="background:;">
+<slide class="" id="slide-21" style="background:;">
   <hgroup>
     <h2>Metabolic Networks</h2>
   </hgroup>
@@ -367,7 +505,7 @@ reactions. (Wikipedia)</p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-16" style="background:;">
+<slide class="" id="slide-22" style="background:;">
   <hgroup>
     <h2>Metabolic Networks</h2>
   </hgroup>
@@ -382,7 +520,7 @@ reactions. (Wikipedia)</p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-17" style="background:;">
+<slide class="" id="slide-23" style="background:;">
   <hgroup>
     <h2>Metabolic Networks</h2>
   </hgroup>
@@ -404,74 +542,7 @@ on a metabolic network.</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-18" style="background:;">
-  <hgroup>
-    <h2>Co-expression Networks</h2>
-  </hgroup>
-  <article data-timings="">
-    <h3>Overview</h3>
-
-<ul>
-<li>Undirected</li>
-<li>Nodes: gene products</li>
-<li>Edges: co-expression relationships</li>
-</ul>
-
-<h3>Data sources</h3>
-
-<ul>
-<li>Microarray</li>
-<li>RNA-Seq</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-19" style="background:;">
-  <hgroup>
-    <h2>Co-expression Networks</h2>
-  </hgroup>
-  <article data-timings="">
-    <h3>Approaches</h3>
-
-<ul>
-<li>Bayesian Networks (Friedman et al., 2000)</li>
-<li>Relevance Networks (Butte &amp; Kohane, 2000)</li>
-<li>Correlation Networks (Stuart et al. 2003; Zhang &amp; Horvath, 2005)</li>
-<li>Gaussian Graphical Models (Schäfer &amp; Strimmer, 2005)</li>
-<li>Canonical correlation analysis (Hong et al. 2013)</li>
-</ul>
-
-<h3>Challenges</h3>
-
-<ul>
-<li>Interpretation of co-expression networks is not as straight-forward as some
-of the other types of networks; gene products may be co-expressed because
-they are regulated by same TF, because they interact closely, etc.</li>
-<li>How correlated should expression profiles be before gene products are
-considered co-expressed?</li>
-<li>Co-expression status can be highly variable with time and condition.</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-20" style="background:;">
-  <hgroup>
-    <h2>Co-expression Networks</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>T. cruzi Co-expression network (Constructed via WGCNA)</p>
-
-<p><img src="assets/img/RNABP.jpg" alt="T. cruzi Co-expression network"></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="segue dark" id="slide-21" style="background:;">
+<slide class="segue dark" id="slide-24" style="background:;">
   <hgroup>
     <h2>Biological network analysis</h2>
   </hgroup>
@@ -481,7 +552,7 @@ considered co-expressed?</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-22" style="background:;">
+<slide class="" id="slide-25" style="background:;">
   <hgroup>
     <h2>So, I built a network... now what?</h2>
   </hgroup>
@@ -507,7 +578,7 @@ be adopted:</p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="references" id="slide-23" style="background:;">
+<slide class="references" id="slide-26" style="background:;">
   <hgroup>
     <h2>References</h2>
   </hgroup>
@@ -520,7 +591,6 @@ be adopted:</p>
 <li>S. Hong, X. Chen, L. Jin, M. Xiong,   (2013) Canonical Correlation Analysis For Rna-Seq co-Expression Networks.  <em>Nucleic Acids Research</em>  <strong>41</strong>  e95-e95  <a href="http://dx.doi.org/10.1093/nar/gkt145">10.1093/nar/gkt145</a></li>
 <li>Peter J. Park,   (2009) Chip–Seq: Advantages And Challenges of A Maturing Technology.  <em>Nature Reviews Genetics</em>  <strong>10</strong>  669-680  <a href="http://dx.doi.org/10.1038/nrg2641">10.1038/nrg2641</a></li>
 <li>Eytan Ruppin, Jason A Papin, Luis F de Figueiredo, Stefan Schuster,   (2010) Metabolic Reconstruction, Constraint-Based Analysis And Game Theory to Probe Genome-Scale Metabolic Networks.  <em>Current Opinion in Biotechnology</em>  <strong>21</strong>  502-510  <a href="http://dx.doi.org/10.1016/j.copbio.2010.07.002">10.1016/j.copbio.2010.07.002</a></li>
-<li>unknown unknown,   (unknown) Unknown.  <em>Unknown</em></li>
 <li>Bin Zhang, Steve Horvath,   (2005) A General Framework For Weighted Gene co-Expression Network Analysis.  <em>Statistical Applications in Genetics And Molecular Biology</em>  <strong>4</strong>  <a href="http://dx.doi.org/10.2202/1544-6115.1128">10.2202/1544-6115.1128</a></li>
 <li><p>X. Zhu, M. Gerstein, M. Snyder,   (2007) Getting Connected: Analysis And Principles of Biological Networks.  <em>Genes &amp; Development</em>  <strong>21</strong>  1010-1024  <a href="http://dx.doi.org/10.1101/gad.1528707">10.1101/gad.1528707</a></p></li>
 <li><p>Butte, a J., &amp; Kohane, I. S. (2000). Mutual information relevance networks:
@@ -563,116 +633,134 @@ from <a href="http://www.ncbi.nlm.nih.gov/pubmed/10902190">http://www.ncbi.nlm.n
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Types of data used to construct biological networks'>
+        data-slide=5 title='Types of Biological Networks'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Transcription factor binding networks'>
+        data-slide=6 title='Types of data used to construct biological networks'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Transcription factor binding networks'>
+        data-slide=7 title='Gene Regulatory Networks (GRNs)'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Transcription factor binding networks'>
+        data-slide=8 title='Gene Regulatory Networks (GRNs)'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Transcription factor binding networks'>
+        data-slide=9 title='Transcription factoring binding networks'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Protein-protein interaction networks'>
+        data-slide=10 title='Transcription factoring binding networks'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Protein-protein interaction networks'>
+        data-slide=11 title='Gene Regulatory Networks (GRNs)'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Protein-protein interaction networks'>
+        data-slide=12 title='Gene Regulatory Networks (GRNs)'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Protein-protein interaction networks'>
+        data-slide=13 title='Co-expression Networks'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Metabolic Networks'>
+        data-slide=14 title='Co-expression Networks'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Metabolic Networks'>
+        data-slide=15 title='Co-expression Networks'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Metabolic Networks'>
+        data-slide=16 title='Protein-protein interaction networks'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Metabolic Networks'>
+        data-slide=17 title='Protein-protein interaction networks'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Co-expression Networks'>
+        data-slide=18 title='Protein-protein interaction networks'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Co-expression Networks'>
+        data-slide=19 title='Protein-protein interaction networks'>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Co-expression Networks'>
+        data-slide=20 title='Metabolic Networks'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Biological network analysis'>
+        data-slide=21 title='Metabolic Networks'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='So, I built a network... now what?'>
+        data-slide=22 title='Metabolic Networks'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='References'>
+        data-slide=23 title='Metabolic Networks'>
          23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Biological network analysis'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='So, I built a network... now what?'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='References'>
+         26
       </a>
     </li>
   </ul>
